@@ -10,12 +10,12 @@ import static org.hamcrest.core.Is.isA;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
-class RangeImplTest {
+class SimpleRangeTest {
     private Range range;
 
     @BeforeEach
     void setUp() {
-        range = new RangeImpl(1,10);
+        range = new SimpleRange(1,10);
     }
 
     @Test
@@ -30,13 +30,13 @@ class RangeImplTest {
 
     @Test
     void testIsBefore(){
-        Range after = new RangeImpl(-10, -1);
+        Range after = new SimpleRange(-10, -1);
         assertTrue(range.isBefore(after));
     }
 
     @Test
     void testIsAfter() {
-        Range after = new RangeImpl(11, 20);
+        Range after = new SimpleRange(11, 20);
         assertTrue(range.isAfter(after));
     }
 
@@ -47,7 +47,7 @@ class RangeImplTest {
 
     @Test
     void testIsConcurrent() {
-        Range concurrent = new RangeImpl(1,10);
+        Range concurrent = new SimpleRange(1,10);
         assertThat(range.isConcurrent(concurrent), is(true));
     }
 

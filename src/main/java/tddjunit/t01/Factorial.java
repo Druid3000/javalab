@@ -1,7 +1,7 @@
 package tddjunit.t01;
 
-public class Factorial {
-    public int fact(int number) throws Exception{
+class Factorial {
+    int fact(int number) throws Exception{
 
         if(number < 0) throw new Exception();
 

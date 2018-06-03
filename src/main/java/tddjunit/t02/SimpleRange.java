@@ -5,12 +5,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public class RangeImpl implements Range {
+public class SimpleRange implements Range {
     private long iteratorPosition;
     private long lowerBound;
     private long upperBound;
 
-    RangeImpl(long lowerBound, long upperBound) {
+    SimpleRange(long lowerBound, long upperBound) {
         if (lowerBound > upperBound) {
             this.lowerBound = upperBound;
             this.upperBound = lowerBound;

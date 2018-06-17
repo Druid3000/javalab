@@ -4,32 +4,66 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.epam.courses.spb.java.javaschool</groupId>
-    <artifactId>javaschool</artifactId>
+    <groupId>com.epam.courses.spb.java.javalab</groupId>
+    <artifactId>javalab</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>8</java.version>
+        <spring.ver>LATEST</spring.ver>
     </properties>
+
 
     <dependencies>
 
+        <!-- Spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.ver}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.ver}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.ver}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.ver}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${spring.ver}</version>
+        </dependency>
+
+        <!-- mysql -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.37</version>
         </dependency>
 
-        <!-- COMMON LIBS (Log4J2 & Vavr) -->
+        <!-- COMMON LIBS (Log4J2 & Vavr)
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-slf4j-impl</artifactId>
             <version>LATEST</version>
             <optional>true</optional>
         </dependency>
-
+-->
         <!-- CODE GENERATION (Lombok & CheckerFramework) -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -86,6 +120,12 @@
             <artifactId>junit-vintage-engine</artifactId>
             <version>LATEST</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>LATEST</version>
         </dependency>
 
     </dependencies>

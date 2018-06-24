@@ -1,6 +1,5 @@
 package spring.lab.aop;
 
-
 import spring.lab.model.Customer;
 import spring.lab.model.Squishee;
 import org.aspectj.lang.JoinPoint;
@@ -39,4 +38,3 @@ public class Politeness {
         return retVal;
     }
 
-}

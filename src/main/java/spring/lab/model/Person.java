@@ -1,4 +1,4 @@
-package spring.t03;
+package spring.lab.model;
 
 public interface Person {
     public void setName(String name);

@@ -15,7 +15,6 @@
         <spring.ver>LATEST</spring.ver>
     </properties>
 
-
     <dependencies>
 
         <!-- Spring -->
@@ -63,7 +62,8 @@
             <version>LATEST</version>
             <optional>true</optional>
         </dependency>
--->
+        -->
+
         <!-- CODE GENERATION (Lombok & CheckerFramework) -->
         <dependency>
             <groupId>org.projectlombok</groupId>

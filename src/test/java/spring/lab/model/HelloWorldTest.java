@@ -1,4 +1,4 @@
-package spring.t03;
+package spring.lab.model;
 
 import static org.junit.Assert.* ;
 import org.junit.*;
@@ -6,9 +6,9 @@ import org.junit.*;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
-import spring.t03.UsualPerson;
-import spring.t03.Person;
-import spring.t03.Country;
+import spring.lab.model.UsualPerson;
+import spring.lab.model.Person;
+import spring.lab.model.Country;
 
 public class HelloWorldTest {
 

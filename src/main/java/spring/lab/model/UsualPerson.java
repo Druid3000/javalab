@@ -1,4 +1,4 @@
-package spring.t03;
+package spring.lab.model;
 
 import javax.persistence.*;
 import java.util.List;

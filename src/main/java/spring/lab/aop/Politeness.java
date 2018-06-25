@@ -37,4 +37,5 @@ public class Politeness {
         AopLog.append("See you! \n");
         return retVal;
     }
+}
 

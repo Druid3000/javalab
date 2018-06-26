@@ -1,4 +1,4 @@
-package spring.lab.dao;
+package spring.lab.dao_lab6;
 
 import spring.lab.model.Country;
 import org.junit.Before;

@@ -1,4 +1,4 @@
-package spring.lab.dao;
+package spring.lab.dao_lab7;
 
 public class CountryNotFoundException extends Exception {
 

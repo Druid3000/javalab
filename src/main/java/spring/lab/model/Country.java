@@ -2,11 +2,20 @@ package spring.lab.model;
 
 import java.io.Serializable;
 
-public class Country implements Serializable{
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-	private static final long serialVersionUID = 1L;
+@Entity
+@Table(name = "COUNTRY")
+public class Country implements Serializable {
 
-	private int id;
+    private static final long serialVersionUID = 1L;
+
+    private int id;
 
     private String name;
 
@@ -26,6 +35,8 @@ public class Country implements Serializable{
         this.codeName = codeName;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() {
         return id;
     }
@@ -34,6 +45,7 @@ public class Country implements Serializable{
         this.id = id;
     }
 
+    @Column(name = "NAME")
     public String getName() {
         return name;
     }
@@ -42,6 +54,7 @@ public class Country implements Serializable{
         this.name = name;
     }
 
+    @Column(name = "CODE_NAME")
     public String getCodeName() {
         return codeName;
     }
@@ -50,18 +63,19 @@ public class Country implements Serializable{
         this.codeName = codeName;
     }
 
-    public String toString() {
-        return id + ". " + name + " (" + codeName + ")";
-    }
-
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
 
         Country country = (Country) o;
 
-        if (codeName != null ? !codeName.equals(country.codeName) : country.codeName != null) return false;
-        if (name != null ? !name.equals(country.name) : country.name != null) return false;
+        if (codeName != null ? !codeName.equals(country.codeName)
+                : country.codeName != null)
+            return false;
+        if (name != null ? !name.equals(country.name) : country.name != null)
+            return false;
 
         return true;
     }
@@ -71,5 +85,11 @@ public class Country implements Serializable{
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (codeName != null ? codeName.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Country [id=" + id + ", name=" + name + ", codeName="
+                + codeName + "]";
     }
 }

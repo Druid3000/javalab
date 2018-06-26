@@ -1,6 +1,6 @@
 package spring.lab.dao_lab7;
 
-import lab.model.Country;
+import spring.lab.model.Country;
 
 import java.util.List;
 

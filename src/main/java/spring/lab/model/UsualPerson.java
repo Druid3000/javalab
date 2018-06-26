@@ -3,7 +3,7 @@ package spring.lab.model;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
+//@Entity
 public class UsualPerson implements Person {
     @Id
     @Column

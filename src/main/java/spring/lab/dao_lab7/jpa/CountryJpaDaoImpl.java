@@ -1,7 +1,7 @@
 package spring.lab.dao_lab7.jpa;
 
-import lab.dao.CountryDao;
-import lab.model.Country;
+import spring.lab.dao_lab7.CountryDao;
+import spring.lab.model.Country;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;

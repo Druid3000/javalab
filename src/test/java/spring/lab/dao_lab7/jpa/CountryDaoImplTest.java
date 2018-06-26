@@ -27,14 +27,14 @@ public class CountryDaoImplTest {
 	private Country exampleCountry = new Country("Australia", "AU");
 
 	@Autowired
-	private CountryDao countryDao;
+	private CountryDao countryDao_lab7;
 
 	@Test
 	public void testSaveCountry() {
 
-		countryDao.save(exampleCountry);
+		countryDao_lab7.save(exampleCountry);
 
-		List<Country> countryList = countryDao.getAllCountries();
+		List<Country> countryList = countryDao_lab7.getAllCountries();
 		assertEquals(1, countryList.size());
 		assertEquals(exampleCountry, countryList.get(0));
 	}
@@ -42,16 +42,16 @@ public class CountryDaoImplTest {
 	@Test
 	public void testGtAllCountries() {
 
-		countryDao.save(new Country("Canada", "CA"));
+		countryDao_lab7.save(new Country("Canada", "CA"));
 
-		List<Country> countryList = countryDao.getAllCountries();
+		List<Country> countryList = countryDao_lab7.getAllCountries();
 		assertEquals(2, countryList.size());
 	}
 
 	@Test
 	public void testGetCountryByName() {
 
-		Country country = countryDao.getCountryByName("Australia");
+		Country country = countryDao_lab7.getCountryByName("Australia");
 		assertEquals(exampleCountry, country);
 	}
 
